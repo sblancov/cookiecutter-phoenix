@@ -1,2 +1,3 @@
-# cookiecutter-phoenix
-This is a template for every phoenix project (elixir web framework).
+# Cookiecutter Phoenix
+
+The aim of this project is to create a template which I can use to create every phoenix project without pain.
