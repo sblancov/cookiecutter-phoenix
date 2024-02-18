@@ -1,0 +1,7 @@
+{
+    "project_name": "A wonderful Phoenix project",
+    "project_brief_description": "The best project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "year": "2024",
+    "author": "Anonymous"
+}

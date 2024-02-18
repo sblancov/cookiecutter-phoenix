@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: {{ cookiecutter.project_slug }}-phoenix
+    env_file:
+      - .env
+    ports:
+      - "4000:4000"
+    working_dir: /app/{{ cookiecutter.project_slug }}
+    command: ["mix", "phx.server"]
+    volumes:
+      - ./app:/app
+    depends_on:
+      - database
+    networks:
+      - {{ cookiecutter.project_slug }}-phoenix-network
+
+  database:
+    image: postgres:16
+    container_name: {{ cookiecutter.project_slug }}-phoenix-db
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - {{ cookiecutter.project_slug }}-phoenix-database:/var/lib/postgresql/data
+    networks:
+      - {{ cookiecutter.project_slug }}-phoenix-network
+
+networks:
+  {{ cookiecutter.project_slug }}-phoenix-network:
+
+volumes:
+  {{ cookiecutter.project_slug }}-phoenix-database:
