@@ -2,4 +2,10 @@
 
 The aim of this project is to create a template which I can use to create every phoenix project without pain.
 
-Read documentation about [technology](./docs/technology.md) to know how this is done. 
+Read documentation about [technology](./docs/technology.md) to know how this is done.
+
+## Usage
+
+Just execute:
+
+    cookiecutter gh:sblancov/cookiecutter-phoenix
