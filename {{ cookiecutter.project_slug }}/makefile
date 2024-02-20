@@ -3,6 +3,7 @@
 SHELL:=bash
 
 APP_DIR:=app/{{ cookiecutter.project_slug }}
+USER:=$(shell id -u)
 
 .PHONY: up
 up:
@@ -87,9 +88,9 @@ st:
 .PHONY: phoenix-create
 phoenix-create:
 	docker run -it \
-		-w /app/ \
-		-v ./app:/app \
-		-u phoenix \
+		-w /app \
+		-v $(PWD)/app:/app \
+		-u $(USER) \
 		phoenix \
 		mix phx.new --install $(app_name)
 
@@ -140,7 +141,7 @@ phoenix-logs:
 database-create:
 	docker exec -it \
 		-w /$(APP_DIR) \
-		-u phoenix \
+		-u $(USER) \
 		phoenix \
 		mix ecto.create
 
