@@ -6,20 +6,27 @@ Read documentation about [technology](./docs/technology.md) to know how this is 
 
 ## Usage
 
-Just execute:
+Execute:
+
+    asdf local python latest:3.10
+
+to use the latest version of python 3.10 and then execute:
 
     cookiecutter gh:sblancov/cookiecutter-phoenix
 
-And then you have to change your directory to go into the project directory called as you have picked.
+And then you have to change your directory to go into the project directory called as you have picked when you select the project slug option.
 
 And you can run a development environment executing:
 
     make up
 
-It uses docker behind the scenes so you need to install it. You can stop it executing:
+and then go to http://localhost:4000/ to run the phoenix application.
+
+
+Behind the scenes, Docker is used, so you need to install it.
+
+Do not forget to stop it when you leave to work:
 
     make down
-
-Take a look in makefile to know what you can do easily.
 
 Happy coding!
