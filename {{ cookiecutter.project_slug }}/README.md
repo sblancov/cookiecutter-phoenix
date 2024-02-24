@@ -8,12 +8,12 @@ You can read all documentation of the project in [docs directory](./docs/index.m
 
 ## Installation
 
-You can read the [Administrators's guide](./docs/administrators/index.md) to get this information.
+You can read the [Administrators's guide](./docs/administrator/index.md) to get this information.
 
 ## Usage
 
-You can read the [User's guide](./docs/users/index.md).
+You can read the [User's guide](./docs/user/index.md).
 
 ## Develop
 
-Follow the [Developer's Guide](./docs/developers/index.md)
+Follow the [Developer's Guide](./docs/developer/index.md)
